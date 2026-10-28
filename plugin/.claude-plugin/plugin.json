@@ -1,6 +1,6 @@
 {
   "name": "session-board",
-  "version": "0.3.6",
+  "version": "0.3.8",
   "description": "세션 진행 대시보드의 훅: 작업 목록이 실제보다 뒤처지지 않게 붙잡고, 예상 시간을 넘기면 중간 점검·재계산을 하게 해요. 대시보드(SessionBoard)를 먼저 설치하세요.",
   "author": { "name": "MoruLab" }
 }
