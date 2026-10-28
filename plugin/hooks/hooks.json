@@ -1,0 +1,36 @@
+{
+  "description": "세션 진행 대시보드 훅. 설치된 SessionBoardHook.exe 를 불러요(없으면 조용히 넘어가요).",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [{ "type": "command", "shell": "bash", "timeout": 10,
+                    "command": "h=\"$LOCALAPPDATA/Programs/SessionBoard/SessionBoardHook.exe\"; [ ! -x \"$h\" ] || \"$h\" rules" }]
+      },
+      {
+        "matcher": "compact",
+        "hooks": [{ "type": "command", "shell": "bash", "timeout": 20,
+                    "command": "h=\"$LOCALAPPDATA/Programs/SessionBoard/SessionBoardHook.exe\"; [ ! -x \"$h\" ] || \"$h\" compact" }]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [{ "type": "command", "shell": "bash", "timeout": 10,
+                    "command": "h=\"$LOCALAPPDATA/Programs/SessionBoard/SessionBoardHook.exe\"; [ ! -x \"$h\" ] || \"$h\" pre" }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [{ "type": "command", "shell": "bash", "timeout": 10,
+                    "command": "h=\"$LOCALAPPDATA/Programs/SessionBoard/SessionBoardHook.exe\"; [ ! -x \"$h\" ] || \"$h\" post" }]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [{ "type": "command", "shell": "bash", "timeout": 20,
+                    "command": "h=\"$LOCALAPPDATA/Programs/SessionBoard/SessionBoardHook.exe\"; [ ! -x \"$h\" ] || \"$h\" stop" }]
+      }
+    ]
+  }
+}
