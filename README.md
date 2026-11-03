@@ -47,4 +47,4 @@ Windows 10/11 · Claude 데스크톱 앱 전용 · 화면 글은 한국어예요
 
 ## 라이선스 고지
 
-화면은 [Qt for Python (PySide6)](https://www.qt.io/qt-for-python)(LGPLv3)를 고치지 않고 동적으로 써요. 프로세스 정보는 [psutil](https://github.com/giampaolo/psutil)(BSD-3)을 써요.
+0.4.0 부터 화면은 [Slint](https://slint.dev)(Made with Slint, Royalty-free License 2.0)로 만들었어요. 프로세스 정보는 [sysinfo](https://github.com/GuillaumeGomez/sysinfo)(MIT), 그 밖에 serde·chrono·regex·ureq·windows-rs·tiny-skia·image 등 MIT·Apache-2.0·BSD 라이선스의 Rust 크레이트를 고치지 않고 써요. 0.3.x(Python 판)는 PySide6(LGPLv3)·psutil(BSD-3)을 썼어요.
