@@ -19,6 +19,12 @@
                     "command": "h=\"$LOCALAPPDATA/Programs/SessionBoard/SessionBoardHook.exe\"; [ ! -x \"$h\" ] || \"$h\" post" }]
       }
     ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [{ "type": "command", "shell": "bash", "timeout": 10,
+                    "command": "h=\"$LOCALAPPDATA/Programs/SessionBoard/SessionBoardHook.exe\"; [ ! -x \"$h\" ] || \"$h\" clear" }]
+      }
+    ],
     "PermissionRequest": [
       {
         "hooks": [{ "type": "command", "shell": "bash", "timeout": 10,
